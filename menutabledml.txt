@@ -1,0 +1,5 @@
+
+insert into Menu values (1,'Idli','VEG',2,35,39);
+insert into Menu values (2,'Biriyani','NON-VEG',1,90,348);
+insert into Menu values (3,'Masala Dosa','NON-VEG',2,45,1023);
+insert into Menu values (4,'Pasta','VEG',1,100,131);
