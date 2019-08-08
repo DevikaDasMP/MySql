@@ -1,0 +1,8 @@
+INSERT INTO Customer (FullName,UserName,UserPassword,EmailId,MobileNo,Address,WalletAmount) 
+values  ('Smit Jakhotia','SJ007','SJ007','smit@gmailcom','123456789','Pune',500),
+		('Jayati Kochhar','JayatiK','JayatiK','jayatik@gmailcom','123456789','Chandigarh',600),
+        ('Sahil Jose','SahilJ','SahilJ','sahil@gmailcom','123456789','Kerela',500),
+        ('Devika Das','DevikaD','Devikad','devika@gmailcom','123456789','Kerela',700);
+        
+        
+        SELECT * FROM Customer;
