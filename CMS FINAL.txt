@@ -1,0 +1,68 @@
+CREATE DATABASE CMS_02;
+
+USE CMS_02;
+
+
+Create Table Customer
+(
+	CustomerId int Not Null Auto_Increment,
+    FullName varchar(20),
+    UserName varchar(20),
+    UserPassword varchar(20),
+    EmailId varchar(20),
+    MobileNo numeric,
+    Address varchar(50),
+    WalletAmount double,
+    Primary key(CustomerId)
+);
+
+
+CREATE TABLE Vendor(
+VendorId INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+Fullname VARCHAR(255) NOT NULL,
+Username VARCHAR(50),
+UserPassword VARCHAR(50),
+EmailId VARCHAR(50),
+MobileNo INT,
+Address VARCHAR(150),
+WalletAmount DOUBLE
+);
+
+
+
+create table Menu(
+MenuId int auto_increment not null primary key,
+MenuName varchar(100),
+MenuType ENUM('VEG','NON-VEG'),
+VendorId int,
+Amount double,
+FOREIGN KEY (VendorId) REFERENCES Vendor(VendorId)
+);
+
+
+ALTER TABLE Menu
+ADD COLUMN Calories VARCHAR(50);
+
+
+
+ CREATE TABLE OrderInfo(
+OrderId INT NOT NULL AUTO_INCREMENT,
+CustomerId int,
+VendorId int,
+MenuId int,
+OrderItem varchar(50),
+OrderQuantity VARCHAR(50),
+TotalAmount int,
+OrderDate DATE,
+OrderTime time,
+EstimatedTime time,
+OrderStatus ENUM('ORDER PLACED','IN PROCESS','DELIVERED','CANCELLED'),
+Rating int,
+PRIMARY KEY (OrderId),
+foreign key (CustomerId) references Customer(CustomerId),
+foreign key (VendorId) references Vendor(vendorId),
+foreign key (MenuId) references Menu(MenuId)
+);
+
+
+INSERT INTO OrderInfo(EstimatedTime,OrderTime) values (ADDTIME(NOW(),"00:30:00"),now()) ;
