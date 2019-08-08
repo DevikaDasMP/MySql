@@ -1,0 +1,11 @@
+insert into orderinfo
+values(1,1,1,1,'noodeles','two',250,now(),now(),ADDTIME(NOW(),"00:30:00"),'order placed',5);
+
+insert into orderinfo
+values(2,2,2,'onion masala dosa','three',300,now(),now(),ADDTIME(NOW(),"00:30:00"),'in progress',4);
+
+insert into orderinfo
+values(3,3,3,'chicken fried rice','one',150,now(),now(),ADDTIME(NOW(),"00:30:00"),'delivered',4);
+
+insert into orderinfo
+values(4,4,4,'veg thali','two',200,now(),now(),ADDTIME(NOW(),"00:30:00"),'cancelled',0);
