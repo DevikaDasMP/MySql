@@ -1,0 +1,9 @@
+USE CMS_02;
+alter table Vendor
+modify MobileNo numeric;
+
+insert into Vendor values(1,'Ram Anand','ramanand','Password@123','ramanand@gmail.com',8547140967,'House No:51,Park Avenue,VR street,TN',10.0);
+insert into Vendor values(2,'Saravanan','saravanan','Password@456','saravanan@gmail.com',3322115596,'House No:27,Fogg,AWS street,KL',30.0);
+
+
+select * from Vendor;
